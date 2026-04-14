@@ -153,7 +153,7 @@ Se recomienda agregar botones interactivos en el flujo para mejorar la experienc
 
 ---
 
-1. Botón: “📊 Ver estado de atención”
+1. Botón: “Ver estado de atención”
 
 **Objetivo:**
 Permitir al usuario consultar su posición actual en la cola.
@@ -192,7 +192,7 @@ Te avisamos apenas sea tu turno.
 
 ---
 
-3. Botón: “❌ Salir de la cola”
+3. Botón: “Salir de la cola”
 
 **Objetivo:**
 Permitir que el usuario abandone la espera voluntariamente.
@@ -220,7 +220,7 @@ Si necesitás ayuda nuevamente, podés volver a escribirnos.
 
 ---
 
-4. Botón: “🚨 Atención urgente” (opcional)
+4. Botón: “Atención urgente” (opcional)
 
 **Objetivo:**
 Permitir que el usuario se marque como prioridad alta.
@@ -249,7 +249,7 @@ Vamos a priorizar tu atención.
 
 ---
 
-5. Botón: “⭐ Soy cliente VIP” (opcional)
+5. Botón: “Soy cliente VIP” (opcional)
 
 **Objetivo:**
 Asignar prioridad media (VIP).
@@ -278,7 +278,7 @@ Tu atención será priorizada.
 
 ---
 
-## Recomendaciones de uso
+# Recomendaciones de uso
 
 * Mostrar estos botones después del mensaje inicial de espera
 * Repetirlos cada cierto tiempo o interacción
