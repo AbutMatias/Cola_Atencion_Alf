@@ -23,13 +23,13 @@ app.use(express.json());
  * }
  */
 app.post("/join", (req, res) => {
-  const { userId, priority } = req.body;
+  const { userId, name, priority } = req.body;
 
   if (!userId) {
     return res.status(400).json({ error: "userId requerido" });
   }
 
-  const position = queue.addUser(userId, priority);
+  const position = queue.addUser(userId, name, priority);
 
   res.json({
     message: "Usuario agregado a la cola",
