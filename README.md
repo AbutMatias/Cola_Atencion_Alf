@@ -1,36 +1,36 @@
-# Sistema de Cola - Botmaker
+Sistema de Cola - Botmaker
 
 Sistema de gestión de cola para atención al cliente con:
 - Prioridades (normal, VIP, urgente)
 - Timeout automático
 - Métricas en tiempo real
 
-# Tecnologías
+Tecnologías
 - Node.js
 - Express
 - Integración con Botmaker
 
-## Endpoints
+Endpoints
 
-# Ingresar a la cola
+Ingresar a la cola
 POST /join
 
-# Consultar posición
+Consultar posición
 GET /position/:userId
 
-# Salir de la cola
+Salir de la cola
 POST /leave
 
-# Métricas
+Métricas
 GET /metrics
 
-# Lógica
+Lógica
 
 - FIFO con prioridad
 - Limpieza automática por inactividad
 - Cálculo de tiempo promedio de espera
 
-# Beneficios
+Beneficios
 
 - Mejora la experiencia del cliente
 - Reduce incertidumbre
@@ -38,13 +38,13 @@ GET /metrics
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Integración con Botmaker mediante Webhooks
+Integración con Botmaker mediante Webhooks
 
 Este sistema de cola se integra con **Botmaker** utilizando Webhooks (llamadas HTTP) para gestionar la posición de los usuarios en tiempo real.
 
 ---
 
-# Concepto de integración
+Concepto de integración
 
 * **Botmaker** actúa como interfaz conversacional con el usuario
 * **Este backend** gestiona la lógica de la cola (posición, prioridades, métricas)
@@ -52,7 +52,7 @@ Este sistema de cola se integra con **Botmaker** utilizando Webhooks (llamadas H
 
 ---
 
-# Requisitos previos
+Requisitos previos
 
 Antes de configurar:
 
@@ -66,7 +66,7 @@ Antes de configurar:
 
 ---
 
-# 1. Ingreso a la cola
+1. Ingreso a la cola
 
 Configurar un Webhook en el flujo inicial del bot.
 
@@ -112,7 +112,7 @@ Te vamos a atender en breve.
 
 ---
 
-# 2. Consulta de posición
+2. Consulta de posición
 
 Permite al usuario consultar su estado en la cola.
 
@@ -140,7 +140,7 @@ Esta llamada también actualiza la actividad del usuario para evitar su eliminac
 
 ---
 
-# 3. Salida de la cola (cuando es atendido)
+3. Salida de la cola (cuando es atendido)
 
 Cuando la conversación es derivada a un agente humano, se debe ejecutar:
 
@@ -166,7 +166,7 @@ https://TU-SERVIDOR/leave
 
 ---
 
-# 4. Manejo de actividad (anti-timeout)
+4. Manejo de actividad (anti-timeout)
 
 Para evitar que el usuario sea eliminado automáticamente por inactividad:
 
@@ -175,7 +175,7 @@ Para evitar que el usuario sea eliminado automáticamente por inactividad:
 
 ---
 
-# 5. Métricas (uso interno)
+5. Métricas (uso interno)
 
 El sistema expone métricas en:
 
