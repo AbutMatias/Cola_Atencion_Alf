@@ -19,22 +19,28 @@ let metrics = {
 const TIMEOUT = 5 * 60 * 1000;
 
 /**
- * Agrega un usuario a la cola
- * @param {string} userId - ID único del usuario
- * @param {string} priority - prioridad (normal, vip, urgente)
- * @returns {number} posición en la cola
+ * Agrega un usuario a la cola con nombre
+ * @param {string} userId
+ * @param {string} name
+ * @param {string} priority
  */
-function addUser(userId, priority = "normal") {
+function addUser(userId, name = "Cliente", priority = "normal") {
+  const existingUser = queue.find(u => u.userId === userId);
+
+  // Evita duplicados
+  if (existingUser) {
+    return getPosition(userId);
+  }
+
   const user = {
     userId,
+    name,
     priority,
-    joinedAt: Date.now(),   // Momento en que entra a la cola
-    lastActive: Date.now()  // Última interacción
+    joinedAt: Date.now(),
+    lastActive: Date.now()
   };
 
   queue.push(user);
-
-  // Ordenar la cola según prioridad
   sortQueue();
 
   return getPosition(userId);
